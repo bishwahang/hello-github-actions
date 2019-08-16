@@ -1,7 +1,12 @@
 #!/bin/sh -l
 
 sh -c "echo Hello world my name is $MY_NAME"
-sh -c 'for i in {1..5}; do echo "Hello" $i; done'
+
+for i in {1..5}
+do
+  echo "Hello $i"
+done
+
 x=1
 while [ $x -le 5 ]
 do
