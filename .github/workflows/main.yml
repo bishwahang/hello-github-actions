@@ -6,6 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        version: 2.6.x
+        run: |
+          echo $RUNNER_TOOL_CACHE
+          ls $RUNNER_TOOL_CACHE
+          ls $RUNNER_TOOL_CACHE/Ruby
     - uses: ./action-a
       env:
         MY_NAME: "Bishwa"
